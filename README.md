@@ -53,6 +53,9 @@ EOF
 sh ~/scripts/virt.install.sh
 ```
 
+For post-installation message, refer following file:
+[virt.install.postinstall.md](/scripts/virt.install.postinstall.md)
+
 ## `virt.create.sh`
 
 This script creates new Alpine Linux virtual machine on your system.
