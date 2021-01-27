@@ -27,8 +27,10 @@ To use attached script files, you need to download and unpack it first.
 > Scripts are not the everything.
 
 ```sh
+wget -qO- https://api.github.com/repos/Seia-Soto/libvirtd-scripts/tarball | tar xvz -C ~/
 mkdir -p ~/scripts
-wget -qO- https://api.github.com/repos/Seia-Soto/libvirtd-scripts/tarball | tar xvz - -C ~/scripts
+mv ~/Seia-Soto-libvirtd-scripts-*/scripts/* ~/scripts
+rm -r ~/Seia-Soto-libvirtd-scripts-*
 ```
 
 ## `virt.install.sh`
