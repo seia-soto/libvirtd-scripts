@@ -60,6 +60,10 @@ sh ~/scritps/virt.create.sh [NAME] [CPU_CORES] [RAM_SIZE] [DISK_SIZE]
 - `RAM_SIZE`: (required) The max size of RAM to allocate in MB (dynamically allocated, max).
 - `DISK_SIZE`: (required) The max size of qcow2 disk to allocate in GB (dynamically allocated, max).
 
+### Notes
+
+- This scripts will create virtual machine which attach `br0` as default network interface.
+
 ## `virt.delete.sh`
 
 This script deletes virtual machine and its dependencies like boot disk things.

@@ -85,6 +85,10 @@ However, there are few steps to do and rebooting is recommened after doing stuff
 
 You need to edit `/etc/network/interfaces` file to make default interface as bridge like following example:
 
+> **Warning**
+>
+> `virt.create.sh` will attach br0 as network interface.
+
 ```
 auto lo
 iface lo inet loopback
