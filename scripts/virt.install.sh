@@ -40,6 +40,9 @@ apk upgrade
 echo - Installing required packages
 apk add util-linux sudo libvirt-daemon qemu-img qemu-system-x86_64 virt-install cdrkit libosinfo bridge
 
+echo - Start libvirtd service
+service start libvirtd
+
 echo - Adding libvirtd to boot service
 rc-update add libvirtd boot
 
