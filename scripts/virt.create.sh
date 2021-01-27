@@ -18,10 +18,10 @@ virt-install \
   --ram $ram \
   --vcpus=$cores \
   --cpu host \
-  --cdrom="~/virtuals/images/alpine-virt-lastinst-x86_64.iso" \
+  --cdrom="${HOME}/virtuals/images/alpine-virt-lastinst-x86_64.iso" \
   --os-type=linux \
   --os-variant=alpinelinux3.13 \
-  --disk path="~/virtuals/machines/${name}_boot.qcow2,size=${disk},bus=virtio,format=qcow2" \
+  --disk path="${HOME}/virtuals/machines/${name}_boot.qcow2,size=${disk},bus=virtio,format=qcow2" \
   --network bridge=br0 \
   --accelerate \
   --nographics \
