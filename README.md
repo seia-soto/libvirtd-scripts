@@ -52,12 +52,13 @@ This will create an Alpine Linux virtual machine with the image downloaded when 
 The version is same with host machine.
 
 ```sh
-sh ~/scritps/virt.create.sh [NAME] [CPU_CORES] [RAM_SIZE]
+sh ~/scritps/virt.create.sh [NAME] [CPU_CORES] [RAM_SIZE] [DISK_SIZE]
 ```
 
 - `NAME`: (required) The name of the virtual machine.
 - `CPU_CORES`: (required) The number of cores to virtualize.
-- `RAM_SIZE`: (required) The max size of RAM to allocate (dynamically allocated, max).
+- `RAM_SIZE`: (required) The max size of RAM to allocate in MB (dynamically allocated, max).
+- `DISK_SIZE`: (required) The max size of qcow2 disk to allocate in GB (dynamically allocated, max).
 
 ## `virt.delete.sh`
 
