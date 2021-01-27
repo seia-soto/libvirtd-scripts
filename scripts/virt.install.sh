@@ -1,7 +1,7 @@
 echo Initiating script
 
 distro=$(grep "^NAME" /etc/os-release | sed "s/.*\=//" | sed "s/\"//g")
-version=$(grep "^VERSION" /etc/os-release | sed "s/.*\=//" | sed "s/\"//g")
+version=$(cat /etc/alpine-release)
 user=$(whoami)
 
 cat << EOF

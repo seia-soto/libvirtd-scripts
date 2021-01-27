@@ -44,7 +44,13 @@ While making system to run virtual machine, this script will create following fo
 - `~/virtuals/machines`, directory for VM disks.
 
 ```sh
-sh ~/scritps/virt.install.sh
+# Uncomment community repository before start;
+cat > /etc/apk/repositories << EOF; $(echo)
+http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/main
+http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/community
+EOF
+
+sh ~/scripts/virt.install.sh
 ```
 
 ## `virt.create.sh`
@@ -54,7 +60,7 @@ This will create an Alpine Linux virtual machine with the image downloaded when 
 The version is same with host machine.
 
 ```sh
-sh ~/scritps/virt.create.sh [NAME] [CPU_CORES] [RAM_SIZE] [DISK_SIZE]
+sh ~/scripts/virt.create.sh [NAME] [CPU_CORES] [RAM_SIZE] [DISK_SIZE]
 ```
 
 - `NAME`: (required) The name of the virtual machine.
@@ -71,7 +77,7 @@ sh ~/scritps/virt.create.sh [NAME] [CPU_CORES] [RAM_SIZE] [DISK_SIZE]
 This script deletes virtual machine and its dependencies like boot disk things.
 
 ```sh
-sh ~/scritps/virt.delete.sh [NAME]
+sh ~/scripts/virt.delete.sh [NAME]
 ```
 
 - `NAME`: (required) The name of the virtual machine.
@@ -81,7 +87,7 @@ sh ~/scritps/virt.delete.sh [NAME]
 This script attaches external qcow2 disk to specific machine.
 
 ```sh
-sh ~/scritps/virt.add_volume.sh [NAME] [SIZE] [PATH]
+sh ~/scripts/virt.add_volume.sh [NAME] [SIZE] [PATH]
 ```
 
 - `NAME`: (required) The name of the virtual machine.
