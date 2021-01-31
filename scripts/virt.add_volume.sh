@@ -11,7 +11,7 @@ if [ -z "$name" ] || [ -z "$disk" ] || [ -z "$dev" ]; then
   exit
 fi
 
-disk_source="~/virtuals/machines/${name}_${dev}_${disk}M.qcow2"
+disk_source="${HOME}/virtuals/machines/${name}_${dev}_${disk}M.qcow2"
 
 echo "Path: ${disk_source}"
 
